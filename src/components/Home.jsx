@@ -3,13 +3,13 @@ import Boton from "./Boton";
 
 function Home() {
 
-    const [res, setRes] = useState("")
+    const [res, setRes] = useState("");
 
     const buttons = ["C", "D", "/", "1", "2", "3", "*", "4", "5", "6", "+", "7", "8", "9", "-", ".", "0", "="];
 
     const findval = () => {
-        let result = Function("return "+res)()
-        setRes(result.toString())
+        let result = Function("return "+res)();
+        setRes(result.toString());
     }
 
     const handler = (arg) => {
@@ -38,7 +38,7 @@ function Home() {
                 </div>
             </div>
             <div className="flex flex-row flex-wrap justify-center pt-5 gap-2">
-                {buttons.map((boton, index) => (<Boton handler={handler} value={boton} key={index} />) )}
+                {buttons.map((btn, index) => (<Boton handler={handler} value={btn} key={index} />) )}
             </div>
             <p className="text-center mt-5 text-cyan-500 font-semibold">@Soynico.click</p>
         </div> 
